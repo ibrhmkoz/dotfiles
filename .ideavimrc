@@ -1,0 +1,58 @@
+" .ideavimrc Configuration for IdeaVim
+" Documentation and examples:
+" - Commands: https://jb.gg/h38q75
+" - Examples: https://jb.gg/share-ideavimrc
+
+" Source the original .vimrc to reuse existing Vim configurations
+source ~/.vimrc
+
+" Set general editing behavior and options
+set number relativenumber        " Show line numbers and relative line numbers
+set idearefactormode=keep        " Preserve mode after refactoring
+set ideajoin                     " Enhance join operation to work like in IDE
+set surround                     " Enable surround feature
+set sneak                        " Enable sneak feature for faster navigation
+set scrolloff=5                  " Keep 5 lines above/below the cursor during scroll
+set incsearch                    " Incremental search that shows matches as you type
+set clipboard^=ideaput           " Integrate system clipboard
+
+" Define leader key (space)
+let mapleader = " "
+
+" Enable and configure IdeaVim plugins
+Plug 'machakann/vim-highlightedyank'  " Highlight copied text
+Plug 'tpope/vim-commentary'           " Commentary plugin for easy commenting
+Plug 'preservim/nerdtree'             " NERDTree for file system navigation
+Plug 'vim-scripts/argtextobj.vim'     " Argument text object plugin for enhanced argument manipulation
+
+" NERDTree specific configurations
+map <c-t> :NERDTreeToggle<CR>         " Toggle NERDTree visibility with Ctrl+t
+let g:NERDTreeMapActivateNode='l'     " Set key for activating node
+let g:NERDTreeMapJumpParent='h'       " Set key for jumping to parent node
+
+" Remap keys for IDE actions
+nnoremap <leader>F :action FindInPath<CR>
+nnoremap <leader>df :action ToggleDistractionFreeMode<CR>
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>ot :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>sh :action SplitHorizontally<CR>
+nnoremap <leader>sv :action SplitVertically<CR>
+nnoremap <leader>mo :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <TAB> :action NextTab<CR>
+nnoremap <s-TAB> :action PreviousTab<CR>
+nnoremap <c-w> :action CloseContent<CR>
+
+" Remap keys for window navigation (using Ctrl)
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+" Remap keys for editing without affecting clipboard
+nnoremap x "_x
+nnoremap X "_X
+
+" Custom formatting and utility mappings
+map Q gq                          " Use Q for formatting instead of Ex mode
+map <F1> [w
+map <F2> [b
