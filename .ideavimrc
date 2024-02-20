@@ -56,3 +56,4 @@ nnoremap X "_X
 map Q gq                          " Use Q for formatting instead of Ex mode
 map <F1> [w
 map <F2> [b
+inoremap <C-c> <Esc>:action EditorCompleteStatement<CR>a
