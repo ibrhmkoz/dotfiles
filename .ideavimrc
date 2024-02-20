@@ -26,7 +26,6 @@ Plug 'preservim/nerdtree'             " NERDTree for file system navigation
 Plug 'vim-scripts/argtextobj.vim'     " Argument text object plugin for enhanced argument manipulation
 
 " NERDTree specific configurations
-map <c-t> :NERDTreeToggle<CR>         " Toggle NERDTree visibility with Ctrl+t
 let g:NERDTreeMapActivateNode='l'     " Set key for activating node
 let g:NERDTreeMapJumpParent='h'       " Set key for jumping to parent node
 
