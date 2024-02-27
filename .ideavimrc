@@ -1,3 +1,4 @@
+
 " .ideavimrc Configuration for IdeaVim
 " Documentation and examples:
 " - Commands: https://jb.gg/h38q75
@@ -7,27 +8,27 @@
 source ~/.vimrc
 
 " General Editing Behavior and Options
-set number relativenumber        " Show line numbers and relative line numbers
-set scrolloff=5                  " Keep 5 lines above/below the cursor during scroll
-set incsearch                    " Incremental search showing matches as you type
-set clipboard^=ideaput           " Integrate system clipboard
-set idearefactormode=keep        " Preserve mode after refactoring
-set ideajoin                     " Enhance join operation to work like in IDE
-set surround                     " Enable surround feature
-set sneak                        " Enable sneak feature for faster navigation
+set number relativenumber
+set scrolloff=5
+set incsearch
+set clipboard^=ideaput
+set idearefactormode=keep
+set ideajoin
+set surround
+set sneak
 
 " Leader Key Definition
 let mapleader = " "
 
 " Plugin Management
-Plug 'machakann/vim-highlightedyank'  " Highlight copied text
-Plug 'tpope/vim-commentary'           " Easy commenting
-Plug 'preservim/nerdtree'             " NERDTree for file system navigation
-Plug 'vim-scripts/argtextobj.vim'     " Argument text object plugin
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'vim-scripts/argtextobj.vim'
 
 " NERDTree Configurations
-let g:NERDTreeMapActivateNode='l'     " Activate node key
-let g:NERDTreeMapJumpParent='h'       " Jump to parent node key
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
 
 " IDE Action Key Mappings
 nnoremap <leader>F :action FindInPath<CR>
@@ -48,13 +49,13 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
 " Editing without Affecting Clipboard
-nnoremap x "_x
-nnoremap X "_X
+nnoremap x
+nnoremap X
 
 " Custom Formatting and Utility Mappings
-map Q gq                          " Formatting instead of Ex mode
-map <F1> [w                       " Custom mapping
-map <F2> [b                       " Custom mapping
+map Q gq
+map <F1> [w
+map <F2> [b
 inoremap <C-c> <Esc>:action EditorCompleteStatement<CR>a
 
 " vim-sneak and vim-surround Customizations
