@@ -10,7 +10,7 @@ source ~/.vimrc
 set number relativenumber
 set scrolloff=5
 set incsearch
-set clipboard^=ideaput
+set clipboard+=unnamed
 set idearefactormode=keep
 set ideajoin
 set surround
@@ -69,4 +69,3 @@ nmap dz  <Plug>Dsurround
 nmap cz  <Plug>Csurround
 omap s <Plug>Sneak_s
 omap S v<Plug>Sneak_S
-
